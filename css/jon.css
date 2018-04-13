@@ -1,0 +1,10 @@
+.nmb-5 {
+    margin-bottom:-12rem;
+    z-index:999;
+    position:relative;
+}
+@media (min-width: 992px) {
+    .nmb-lg-0 {
+        margin-bottom:0;
+    }
+}
