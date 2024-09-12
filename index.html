@@ -17,6 +17,50 @@
     <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
     <!-- IcoMoon -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/9899b96a38/UntitledProject/style.css">
+    <style type="text/css">
+    /* Container element for the recent tracks list */
+    .cc_recenttracks_list {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0px;
+        height: 150px;
+    }
+
+    /* Container for a single track in the list */
+    .cc_recenttracks_list>.cctrack {}
+
+    /* Container for a track's image */
+    .cc_recenttracks_list>.cctrack>.cccover {}
+
+    /* The track's image */
+    .cc_recenttracks_list>.cctrack>.cccover>img {}
+
+    /* The time at which the track aired */
+    .cc_recenttracks_list>.cctrack>.cctime {}
+
+    /* The time at which the current track began playing */
+    .cc_recenttracks_list>.cctrack>.cctime.ccnowplaying {}
+
+    /* Container for the track's details */
+    .cc_recenttracks_list>.cctrack>.ccdetails {}
+
+    /* The track's title */
+    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle {}
+
+    /* The current track's title */
+    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle.ccnowplaying {}
+
+    /* The track's artist */
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccartist {}
+
+    /* The track's album */
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccalbum {}
+
+    /* The track's buy-now link, if any */
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccbuy {}
+    </style>
 </head>
 
 <body class="bg-kllight">
