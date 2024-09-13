@@ -122,19 +122,16 @@
                                 <h3 class="font-weight-light text-dark cc_streaminfo" data-type="trackalbum" data-username="jaygreentree">
                                 </h3>
                                 <!-- Now Playing -->
-                                <audio controls class="w-100">
-                                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg" />
-                                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.ogg" type="audio/ogg" />
-                                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.wav" type="audio/wav" />
-                                    Audio not supported
-                                </audio>
-                                <button type="button" class="btn btn-primary ripple btn-round mt-3 font-weight-bold color-change-2x"><i class="fas fa-play mr-2"></i>PLAY</button>
+                                <div class="cc_player bg-primary" data-username="user" data-skin="foobar" data-autoplay="1">
+                                    Loading ...
+                                </div>
+                                <!--button type="button" class="btn btn-primary ripple btn-round mt-3 font-weight-bold color-change-2x"><i class="fas fa-play mr-2"></i>PLAY</button>
                                 <img class="img-fluid mt-3 ml-md-3 py-2" src="img/vol-placeholder.png" style="width: 350px;">
                                 <p class="text-muted mt-4 border-top pt-3">Share:
                                     <a class="ripple-2" href="#"><i class="fab fa-facebook-f mx-3 color-facebook"></i></a>
                                     <a class="ripple-2" href="#"><i class="fab fa-twitter mx-3 text-cyan"></i></a>
                                     <a class="ripple-2" href="#"><i class="fas fa-shopping-cart mx-3 text-secondary"></i></a>
-                                </p>
+                                    </p-->
                             </div>
                         </div>
                     </div>
@@ -222,6 +219,34 @@
             scale_covers: 0, // 1 to scale covers to the default size, 0 to allow
             // the web page to apply width/height via CSS
             buy_target: '_blank' // target frame for "buy now" links
+
+        };
+    })();
+    (function() {
+        var centovacast = (window.centovacast || (window.centovacast = {}));
+        (centovacast.player || (centovacast.player = {})).config = {
+
+            muses: { // configuration used when Muses is your configured player
+                lang: 'auto', // force a specific language for the Muses interface
+                volume: 75, // set initial volume
+                autoplay: false, // automatically begin playing on page load
+                buffering: 5, // number of seconds of audio to buffer
+                bgcolor: '#FFFFFF', // background color (change to match your page)
+                //width: 180,          // set a custom widget width (defaults to skin width)
+                //height: 60,          // set a custom widget height (defaults to skin height)
+                //title: 'Title',      // set a custom title (defaults to your station name)
+                //skin: 'http://example.com/skin.xml', // use a custom Muses skin URL
+            },
+            jplayer: { // configuration used when jPlayer is your configured player
+            },
+            wmp: { // configuration used when Windows Media Player is your configured player
+                autostart: 0, // automatically begin playing on page load
+                showcontrols: 1, // show WMP playback controls
+                showstatusbar: 1, // show WMP status bar
+                showdisplay: 1, // show WMP display
+                //width: 180,          // set a custom widget width
+                //height: 60,          // set a custom widget height
+            }
 
         };
     })();
