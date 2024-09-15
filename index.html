@@ -15,8 +15,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Font Awesome 5 -->
     <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
-    <!-- IcoMoon -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/9899b96a38/UntitledProject/style.css">
+    <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/streaminfo.js"></script>
+    <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/recenttracks.js"></script>
     <style type="text/css">
     /* Container element for the recent tracks list */
     .cc_recenttracks_list {
@@ -29,67 +29,98 @@
     }
 
     /* Container for a single track in the list */
-    .cc_recenttracks_list>.cctrack {}
+    .cc_recenttracks_list>.cctrack {
+
+    }
 
     /* Container for a track's image */
-    .cc_recenttracks_list>.cctrack>.cccover {}
+    .cc_recenttracks_list>.cctrack>.cccover {
+
+    }
 
     /* The track's image */
-    .cc_recenttracks_list>.cctrack>.cccover>img {}
+    .cc_recenttracks_list>.cctrack>.cccover>img {
+        width: 100%;
+    }
 
     /* The time at which the track aired */
-    .cc_recenttracks_list>.cctrack>.cctime {}
+    .cc_recenttracks_list>.cctrack>.cctime {
+
+    }
 
     /* The time at which the current track began playing */
-    .cc_recenttracks_list>.cctrack>.cctime.ccnowplaying {}
+    .cc_recenttracks_list>.cctrack>.cctime.ccnowplaying {
+
+    }
 
     /* Container for the track's details */
-    .cc_recenttracks_list>.cctrack>.ccdetails {}
+    .cc_recenttracks_list>.cctrack>.ccdetails {
+
+    }
 
     /* The track's title */
-    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle {}
+    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle {
+
+    }
 
     /* The current track's title */
-    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle.ccnowplaying {}
+    .cc_recenttracks_list>.cctrack>.ccdetails>.cctitle.ccnowplaying {
+
+    }
 
     /* The track's artist */
-    .cc_recenttracks_list>.cctrack>.ccdetails>.ccartist {}
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccartist {
+
+    }
 
     /* The track's album */
-    .cc_recenttracks_list>.cctrack>.ccdetails>.ccalbum {}
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccalbum {
 
-    /* The track's buy-now link, if any */
-    .cc_recenttracks_list>.cctrack>.ccdetails>.ccbuy {}
-        audio{
-    padding: 300px;
-}
-audio::-webkit-media-controls-panel{
-    background-color: cornflowerblue;
-}
-audio::-webkit-media-controls-play-button{
-    background-color: lightblue;
-    border-radius: 50%;
-}
-audio::-webkit-media-controls-current-time-display{
-    color: #333;
-}
-audio::-webkit-media-controls-time-remaining-display{
-    color: #333;
-}
-audio::-webkit-media-controls-timeline{
-    border-radius: 40px;
-    background-color: lightblue;
-}
-audio::-webkit-media-controls-volume-slider{
-    background-color: lightblue;
-    border-radius: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-audio::-webkit-media-controls-mute-button{
-    background-color: lightblue;
-    border-radius: 50%;
-}
+    }
+
+    .cc_recenttracks_list>.cctrack>.ccdetails>.ccbuy {
+
+    }
+
+    audio {
+        padding: 300px;
+        background-color: transparent;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: transparent;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: #00adee;
+        color: #fffff;
+        border-radius: 50%;
+    }
+
+    audio::-webkit-media-controls-current-time-display {
+        color: #fffff;
+    }
+
+    audio::-webkit-media-controls-time-remaining-display {
+        color: #fffff;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        border-radius: 40px;
+        background-color: #00adee;
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: #00adee;
+        border-radius: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: #00adee;
+        border-radius: 50%;
+    }
     </style>
 </head>
 
@@ -152,14 +183,14 @@ audio::-webkit-media-controls-mute-button{
                                 <h3 class="font-weight-light text-dark cc_streaminfo" data-type="trackalbum" data-username="jaygreentree">
                                 </h3>
                                 <!-- Now Playing -->
-                                <audio id="player" controls preload="none" style="width:16em;padding:0;">
-                                    <source src="http://149.56.175.167:6938/stream?type=http&nocache=20" type='audio/mpeg'>
+                                <audio id="player" preload="none" style="width:100%;padding:0;">
+                                    <source src="https://mp3.jaygreentree.org/stream?type=http&nocache=20" type='audio/mpeg'>
                                 </audio>
                                 <div>
-                                    <button class="btn" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
-                                    <button class="btn" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
-                                    <button class="btn" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
-                                    <button class="btn" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+                                    <button class="btn btn-primary ripple btn-round mt-3 font-weight-bold color-change-2x" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
+                                    <button class="btn btn-primary ripple btn-round mt-3 font-weight-bold" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
+                                    <button class="btn btn-primary ripple btn-round mt-3 font-weight-bold" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button>
+                                    <button class="btn btn-primary ripple btn-round mt-3 font-weight-bold" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button>
                                 </div>
                                 <!--button type="button" class="btn btn-primary ripple btn-round mt-3 font-weight-bold color-change-2x"><i class="fas fa-play mr-2"></i>PLAY</button>
                                 <img class="img-fluid mt-3 ml-md-3 py-2" src="img/vol-placeholder.png" style="width: 350px;">
@@ -182,7 +213,10 @@ audio::-webkit-media-controls-mute-button{
         <div class="container">
             <div class="row justify-content-center py-4">
                 <div class="col-11 col-md-12">
-                    <h5 class="text-secondary text-center mb-4"><span class="icon-kl-recently-played mr-2 fa-2x v-align"></span>RECENTLY PLAYED</h5>
+                    <h5 class="text-secondary text-center mb-4">
+                        <span class="icon-kl-recently-played mr-2 fa-2x v-align"></span>
+                        RECENTLY PLAYED
+                    </h5>
                 </div>
                 <!--div class="col-11 col-md-3 mb-2">
                     <a href="#" style="text-decoration: none;">
@@ -243,14 +277,14 @@ audio::-webkit-media-controls-mute-button{
     </div>
     <!-- FOOTER -->
     <!-- Optional JavaScript -->
-    <script language="javascript">
+    <script>
     (function() {
         var centovacast = (window.centovacast || (window.centovacast = {}));
         (centovacast.recenttracks || (centovacast.recenttracks = {})).config = {
 
             poll_limit: 60, // specify how many times to poll the server
             poll_frequency: 60000, // specify the poll frequency in milliseconds
-            track_limit: 10, // maximum number of tracks to display (0=all)
+            track_limit: 7, // maximum number of tracks to display (0=all)
             show_covers: 1, // 1 to show covers, 0 to hide
             scale_covers: 0, // 1 to scale covers to the default size, 0 to allow
             // the web page to apply width/height via CSS
@@ -258,37 +292,7 @@ audio::-webkit-media-controls-mute-button{
 
         };
     })();
-    (function() {
-        var centovacast = (window.centovacast || (window.centovacast = {}));
-        (centovacast.player || (centovacast.player = {})).config = {
-
-            muses: { // configuration used when Muses is your configured player
-                lang: 'auto', // force a specific language for the Muses interface
-                volume: 75, // set initial volume
-                autoplay: false, // automatically begin playing on page load
-                buffering: 5, // number of seconds of audio to buffer
-                bgcolor: '#FFFFFF', // background color (change to match your page)
-                //width: 180,          // set a custom widget width (defaults to skin width)
-                //height: 60,          // set a custom widget height (defaults to skin height)
-                //title: 'Title',      // set a custom title (defaults to your station name)
-                //skin: 'http://example.com/skin.xml', // use a custom Muses skin URL
-            },
-            jplayer: { // configuration used when jPlayer is your configured player
-            },
-            wmp: { // configuration used when Windows Media Player is your configured player
-                autostart: 0, // automatically begin playing on page load
-                showcontrols: 1, // show WMP playback controls
-                showstatusbar: 1, // show WMP status bar
-                showdisplay: 1, // show WMP display
-                //width: 180,          // set a custom widget width
-                //height: 60,          // set a custom widget height
-            }
-
-        };
-    })();
-    </script>
-    <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/streaminfo.js"></script>
-    <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/recenttracks.js"></script>
+</script>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
