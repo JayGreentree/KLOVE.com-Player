@@ -60,6 +60,36 @@
 
     /* The track's buy-now link, if any */
     .cc_recenttracks_list>.cctrack>.ccdetails>.ccbuy {}
+        audio{
+    padding: 300px;
+}
+audio::-webkit-media-controls-panel{
+    background-color: cornflowerblue;
+}
+audio::-webkit-media-controls-play-button{
+    background-color: lightblue;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-current-time-display{
+    color: #333;
+}
+audio::-webkit-media-controls-time-remaining-display{
+    color: #333;
+}
+audio::-webkit-media-controls-timeline{
+    border-radius: 40px;
+    background-color: lightblue;
+}
+audio::-webkit-media-controls-volume-slider{
+    background-color: lightblue;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+audio::-webkit-media-controls-mute-button{
+    background-color: lightblue;
+    border-radius: 50%;
+}
     </style>
 </head>
 
@@ -122,7 +152,9 @@
                                 <h3 class="font-weight-light text-dark cc_streaminfo" data-type="trackalbum" data-username="jaygreentree">
                                 </h3>
                                 <!-- Now Playing -->
-                                <audio id="audio_1" controls preload="none" style="width:16em;padding:0;"><source src="http://149.56.175.167:6938/stream?type=http&nocache=20" type='audio/mpeg'></audio>
+                                <audio id="player" controls preload="none" style="width:16em;padding:0;">
+                                    <source src="http://149.56.175.167:6938/stream?type=http&nocache=20" type='audio/mpeg'>
+                                </audio>
                                 <div>
                                     <button class="btn" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
                                     <button class="btn" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
