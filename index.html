@@ -122,10 +122,7 @@
                                 <h3 class="font-weight-light text-dark cc_streaminfo" data-type="trackalbum" data-username="jaygreentree">
                                 </h3>
                                 <!-- Now Playing -->
-                                <audio id="player">
-                                    <source src="http://149.56.175.167:6938/stream?type=http&nocache=20" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
+                                <audio id="audio_1" controls preload="none" style="width:16em;padding:0;"><source src="http://149.56.175.167:6938/stream?type=http&nocache=20" type='audio/mpeg'></audio>
                                 <div>
                                     <button class="btn" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
                                     <button class="btn" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
