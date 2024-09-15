@@ -122,9 +122,13 @@
                                 <h3 class="font-weight-light text-dark cc_streaminfo" data-type="trackalbum" data-username="jaygreentree">
                                 </h3>
                                 <!-- Now Playing -->
-                                <div class="cc_player bg-primary" data-username="jaygreentree" data-skin="foobar" data-autoplay="1">
-                                    Loading ...
-                                </div>
+                                <audio id="player" src="vincent.mp3"></audio>
+<div> 
+  <button onclick="document.getElementById('player').play()">Play</button> 
+  <button onclick="document.getElementById('player').pause()">Pause</button> 
+  <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+  <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+</div>
                                 <!--button type="button" class="btn btn-primary ripple btn-round mt-3 font-weight-bold color-change-2x"><i class="fas fa-play mr-2"></i>PLAY</button>
                                 <img class="img-fluid mt-3 ml-md-3 py-2" src="img/vol-placeholder.png" style="width: 350px;">
                                 <p class="text-muted mt-4 border-top pt-3">Share:
@@ -253,7 +257,7 @@
     </script>
     <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/streaminfo.js"></script>
     <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/recenttracks.js"></script>
-    <script language="javascript" type="text/javascript" src="https://usa14.fastcast4u.com/system/player.js"></script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
